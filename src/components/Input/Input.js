@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Input({handleWord}) {
+function Input({handleWord, winLose}) {
   const [text, setText] = React.useState('');
-
+  
   function handleText(event){
     event.preventDefault();
     if( text.length!== 5){
@@ -12,14 +12,16 @@ function Input({handleWord}) {
      setText('');
     }
   }
+
   return <div>
     <form className="guess-input-wrapper"
-        onSubmit={handleText}>
+        onSubmit={handleText} 
+        >
   <label htmlFor="guess-input">Enter guess:</label>
   <input id="guess-input" 
     type="text"
     value={text}
-    required
+    disabled={winLose!=='running'}
     pattern='[a-zA-Z]{5}'
     title='Please use 5 Alpa-Numerics'
     onChange={event=> {
