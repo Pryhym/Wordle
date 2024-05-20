@@ -24,14 +24,13 @@ function Game() {
 
     if (text === answer){
       setWinLose('win');
-    } else if((num+1)===6){
+    } else if((num+1) === 6){
       setWinLose('lose');
     }
   }
   
   return (
   <>
-  Put a game here!
   <WordDisplay display={word} answer={answer} />
   <Input handleWord={handleWord} winLose={winLose} />
   <GameOver winLose={winLose} num={num} answer={answer} />
