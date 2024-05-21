@@ -230,3 +230,18 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+.reset {
+  background-color: lightcoral;
+  width: 100px; 
+  margin: 0 auto;
+  position: relative;
+  left: vw/2;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-color: black;
+  font-weight: 700;
+}
