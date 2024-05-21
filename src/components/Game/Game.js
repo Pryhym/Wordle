@@ -7,7 +7,6 @@ import WordDisplay from '../WordDisplay/WordDisplay';
 import GameOver from '../GameOver/GameOver';
 
 // Pick a random word on every pageload.
-const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
 
 function Game() {
