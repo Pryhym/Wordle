@@ -41,10 +41,10 @@ function Input({handleWord, winLose}) {
         />
 </form>
     <div>
-      {rows.map((row) =>(
-        <div className="keyboard-row">
-          {row.map((letter) => (
-            <div className="key"
+      {rows.map((row, index) =>(
+        <div className="keyboard-row" key={index}>
+          {row.map((letter, index) => (
+            <div className="key" key={index}
               onClick={()=>{
                 if(text.length === 5){
                 return;
