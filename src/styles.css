@@ -245,3 +245,17 @@ h1 {
   border-color: black;
   font-weight: 700;
 }
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.key {
+  background-color: lightgray;
+  border: 2px solid;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
