@@ -30,19 +30,28 @@ function Input({handleWord, winLose}) {
   <input id="guess-input" 
     type="text"
     value={text}
+    maxLength={5}
     disabled={winLose!=='running'}
     pattern='[a-zA-Z]{5}'
     title='Please use 5 Alpa-Numerics'
     onChange={event=> {
-      setText(event.target.value.toUpperCase());
-    }}/>
+            setText(event.target.value.toUpperCase());
+          }
+        }
+        />
 </form>
     <div>
       {rows.map((row) =>(
         <div className="keyboard-row">
           {row.map((letter) => (
             <div className="key"
-              onClick={()=>(setText(`${text}${letter}`))}>{letter}</div>
+              onClick={()=>{
+                if(text.length === 5){
+                return;
+              }else{
+                setText(`${text}${letter}`)
+              }
+            }}>{letter}</div>
               ))}
         </div>
       )
